@@ -1,0 +1,25 @@
+.calendar__header {
+    background-color: $primary;
+    padding: $spacer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacer * 2;
+
+    .header__arrow {
+        background-color: transparent;
+        border: none;
+    }
+
+    .header__date {
+        text-align: center;
+
+        .date__month {
+            font-size: 24px;
+            margin-bottom: $spacer;
+        }
+
+        .date__full-date {
+            font-size: 12px;
+        }
+    }
+}

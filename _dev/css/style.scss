@@ -1,0 +1,19 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./_partials/reset";
+@import "./_partials/variable";
+
+//Default
+
+p,
+h1,
+h2,
+label,
+input {
+	color: white;
+	font-family: $font-family-base, sans-serif;
+}
+
+//Components
+@import "./components/header.scss";
+@import "./components/main.scss";
+//Common

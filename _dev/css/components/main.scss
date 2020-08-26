@@ -1,0 +1,41 @@
+.calendar {
+    width: 574px;
+    display: inline-block;
+    background-color: #202020;
+
+    .calendar__content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $spacer * 2;
+
+
+        .content__days {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .days__text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 72px;
+            height: 72px;
+        }
+
+        .numbers__number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 72px;
+            height: 72px;
+            transition: .1s ease-in-out;
+
+            &:hover {
+                background-color: $primary;
+
+            }
+        }
+
+    }
+}
