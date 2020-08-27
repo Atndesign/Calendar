@@ -31,11 +31,13 @@
             height: 72px;
             transition: .1s ease-in-out;
 
-            &:hover {
-                background-color: $primary;
+            &.--grey {
+                color: rgb(78, 78, 78);
+            }
 
+            &.--current {
+                background-color: $primary;
             }
         }
-
     }
 }
