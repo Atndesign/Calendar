@@ -24,19 +24,26 @@ const months = [
 
 let date = new Date();
 
+date.setDate(1);
+
 document.querySelector(".date__month").innerHTML = months[date.getMonth()];
 document.querySelector(".date__full-date").innerHTML = date.toDateString();
-
-function getDaysInMonth(date) {
-  return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-}
 
 function generateDays() {
   let calendar = document.getElementById("calendar");
   let days = getDaysInMonth(new Date(2020, 9));
-  for (day = 1; day <= days; day++) {
-    calendar.innerHTML += `<p class="numbers__number">${day}</p>`;
+  for (day = 1; day < days; day++) {
+    if (
+      day === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth()
+    ) {
+      calendar.innerHTML += `<p class="numbers__number --current">${day}</p>`;
+    } else {
+      calendar.innerHTML += `<p class="numbers__number">${day}</p>`;
+    }
   }
 }
 
+generatePastDays();
 generateDays();
+generateNextDays();
