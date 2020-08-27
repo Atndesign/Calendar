@@ -52,14 +52,14 @@ function generatePastDays() {
 }
 
 function generateNextDays() {
-  for (nextDay = 1; nextDay <= nextDays; nextDay++) {
+  for (nextDay = 1; nextDay < nextDays; nextDay++) {
     calendar.innerHTML += `<p class="numbers__number --grey">${nextDay}</p>`;
   }
 }
 
 function generateDays() {
   let days = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-  for (day = 1; day < days; day++) {
+  for (day = 1; day <= days; day++) {
     if (
       day === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
