@@ -30,7 +30,9 @@ date.setDate(1);
 
 function displayDate() {
   document.querySelector(".date__month").innerHTML = months[date.getMonth()];
-  document.querySelector(".date__full-date").innerHTML = date.toDateString();
+  document.querySelector(
+    ".date__full-date"
+  ).innerHTML = new Date().toDateString();
 }
 
 const firstDayIndex = date.getDay();
